@@ -1,0 +1,58 @@
+/* ============================================================
+   静默科技 · Design Tokens
+   只放变量，不含组件。任何项目可以单独引入这一份做配色与排版基线。
+   ============================================================ */
+
+:root {
+  /* ---------- 色板：一个墨色系 + 一个强调色，就够 ---------- */
+  --qt-ink:        #0B0B0C;   /* 主墨色：首屏、代码块、页脚 */
+  --qt-ink-2:      #14161A;   /* 次级墨色：分层背景 */
+  --qt-ink-3:      #1D2026;   /* 三级墨色：悬停态 */
+  --qt-paper:      #FFFFFF;   /* 主底色 */
+  --qt-paper-2:    #F5F6F7;   /* 次级底色：交替版块 */
+  --qt-accent:     #2D6CDF;   /* 唯一强调色：靛蓝 */
+  --qt-accent-hover:#1F55B8;
+  --qt-accent-dim: rgba(45, 108, 223, .10);
+  --qt-muted:      #8A9099;   /* 辅助文字 */
+  --qt-body:       #3F444C;   /* 正文 */
+  --qt-title:      #111318;   /* 标题 */
+
+  /* ---------- 描边：用发丝线代替阴影 ---------- */
+  --qt-line:       rgba(11, 11, 12, .10);
+  --qt-line-strong:rgba(11, 11, 12, .18);
+  --qt-line-dark:  rgba(255, 255, 255, .12);
+
+  /* ---------- 字体 ---------- */
+  --qt-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+             "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --qt-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+             "Liberation Mono", monospace;
+
+  /* ---------- 字号阶（clamp 自适应，不写媒体查询） ---------- */
+  --qt-fs-display: clamp(30px, 5.4vw, 62px);   /* 首屏主标题 */
+  --qt-fs-h2:      clamp(20px, 2.6vw, 30px);   /* 版块标题 */
+  --qt-fs-h3:      17px;                        /* 卡片标题 */
+  --qt-fs-lead:    clamp(14px, 1.4vw, 16.5px);  /* 首屏副文 */
+  --qt-fs-body:    15.5px;                      /* 正文 */
+  --qt-fs-sm:      13.5px;                      /* 卡片正文 */
+  --qt-fs-label:   11px;                        /* 编号 / 小标签（等宽） */
+
+  /* ---------- 间距 ---------- */
+  --qt-pad:        clamp(24px, 6vw, 96px);      /* 版块左右留白 */
+  --qt-sec-y:      clamp(56px, 8vw, 104px);     /* 版块纵向留白 */
+  --qt-gap:        16px;                        /* 卡片间距 */
+  --qt-gap-lg:     clamp(28px, 4vw, 44px);
+
+  /* ---------- 圆角：2px，故意接近直角 ---------- */
+  --qt-radius:     2px;
+
+  /* ---------- 动效 ---------- */
+  --qt-ease:       cubic-bezier(.22, .61, .36, 1);
+  --qt-t-fast:     .2s;
+  --qt-t-hover:    .22s;
+  --qt-t-reveal:   .62s;
+
+  /* ---------- 字距 ---------- */
+  --qt-track-label: .22em;   /* 等宽小标签拉宽 */
+  --qt-track-title: -.02em;  /* 大标题收紧 */
+}

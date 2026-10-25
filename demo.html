@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>静默科技 · 组件演示</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="theme.css">
+<style>
+  body { margin: 0; background: var(--qt-paper); }
+</style>
+</head>
+<body>
+
+<header class="qt-hero">
+  <div class="qt-eyebrow">Design System · Quiet Tech</div>
+  <h1>把复杂的事<br>讲得干净<em>。</em></h1>
+  <p class="qt-lead">暗色只用在首屏，强调色只有一个，分隔靠发丝线不靠阴影。这套约束的目的不是好看，是让内容始终是主角。</p>
+  <nav class="qt-nav">
+    <a class="is-primary" href="#components">看组件 →</a>
+    <a href="#tokens">设计令牌</a>
+    <a href="#prose">长文排版</a>
+  </nav>
+  <div class="qt-stats">
+    <div><b>01</b><span>强调色</span></div>
+    <div><b>22px</b><span>点阵尺度</span></div>
+    <div><b>2px</b><span>圆角上限</span></div>
+    <div><b>1.85</b><span>正文行高</span></div>
+  </div>
+  <div class="qt-scroll">Scroll to explore</div>
+</header>
+
+<section class="qt-sec" id="components">
+  <div class="qt-head">
+    <div class="no">01</div>
+    <h2>版块与卡片</h2>
+    <p>编号负责定位，标题负责结论，说明放右侧。三者基线对齐，不居中。</p>
+  </div>
+  <div class="qt-cards">
+    <a class="qt-card" href="#">
+      <div class="kicker">Type / Mono</div>
+      <h3>等宽字体只做标记</h3>
+      <p>编号、标签、数字用等宽字体，正文一律用无衬线。等宽在这里是「仪器刻度」，不是装饰。</p>
+      <div class="meta">11px · 字距 .22em · 大写</div>
+    </a>
+    <a class="qt-card" href="#">
+      <div class="kicker">Color / Single</div>
+      <h3>只允许一个强调色</h3>
+      <p>靛蓝负责可点击、当前项与主按钮。第二种彩色一旦引入，视觉秩序就开始崩。</p>
+      <div class="meta">#2D6CDF · 悬停 #1F55B8</div>
+    </a>
+    <a class="qt-card" href="#">
+      <div class="kicker">Space / Hairline</div>
+      <h3>用线分隔，不用阴影</h3>
+      <p>10% 不透明度的发丝线能切分空间，又不会像阴影那样制造「浮起来」的错觉。</p>
+      <div class="meta">rgba(11,11,12,.10) · 1px</div>
+    </a>
+  </div>
+</section>
+
+<section class="qt-sec is-alt" id="tokens">
+  <div class="qt-head">
+    <div class="no">02</div>
+    <h2>列表</h2>
+    <p>用于文章索引、日志、更新记录。悬停时整行左移 8px 并出现强调色底纹。</p>
+  </div>
+  <div class="qt-list">
+    <a class="qt-item" href="#">
+      <span class="no">01</span>
+      <span class="ttl">色板只有九个值<small>墨三级、纸两级、强调三级、辅助两色——够了</small></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="qt-item" href="#">
+      <span class="no">02</span>
+      <span class="ttl">字号用 clamp，不写断点<small>一个公式覆盖 320px 到 1440px，少一层维护</small></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="qt-item" href="#">
+      <span class="no">03</span>
+      <span class="ttl">动效只做位移与透明度<small>不缩放、不旋转、不发光：这三种最容易显得廉价</small></span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<section class="qt-sec">
+  <div class="qt-head">
+    <div class="no">03</div>
+    <h2>两栏说明</h2>
+  </div>
+  <div class="qt-about">
+    <div>
+      <p>左边放论述，右边放可核对的事实。事实表用等宽字体右对齐，因为它本质是一张数据表，不是一段文案。</p>
+      <p>这种结构适合放「关于」「规格」「技术参数」——凡是需要读者快速扫读并取信的内容。</p>
+    </div>
+    <div class="qt-facts">
+      <div><span>强调色</span><b>#2D6CDF</b></div>
+      <div><span>主墨色</span><b>#0B0B0C</b></div>
+      <div><span>圆角</span><b>2px</b></div>
+      <div><span>正文</span><b>15.5px / 1.85</b></div>
+      <div><span>动效曲线</span><b>cubic-bezier(.22,.61,.36,1)</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="qt-sec is-alt" id="prose">
+  <div class="qt-head">
+    <div class="no">04</div>
+    <h2>长文排版</h2>
+    <p>用 .qt-prose 包裹。暗色不进入正文区——长文黑底阅读疲劳。</p>
+  </div>
+  <div class="qt-prose">
+    <h3>这是一段正文的样子</h3>
+    <p>行高 1.85，字号 15.5px，颜色 <code>#24262B</code>。正文不用纯黑，纯黑在浅底上对比过强，长时间阅读会有闪烁感。链接用强调色，不用下划线——下划线是「旧网页」的视觉噪音。</p>
+    <blockquote>引用用左侧 3px 强调色竖线加浅底。竖线是这套系统里唯一允许的粗线。</blockquote>
+    <pre><code>npm run build
+# 没有构建步骤时，这一行就是跑个检查</code></pre>
+    <table>
+      <thead><tr><th>层级</th><th>用途</th><th>色值</th></tr></thead>
+      <tbody>
+        <tr><td>墨</td><td>首屏、代码、页脚</td><td><code>#0B0B0C</code></td></tr>
+        <tr><td>纸</td><td>正文底色</td><td><code>#FFFFFF</code></td></tr>
+        <tr><td>强调</td><td>链接、当前项、按钮</td><td><code>#2D6CDF</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="qt-foot">
+  <span>© 2026</span>
+  <span class="sep">·</span>
+  <a href="#">GitHub</a>
+  <span class="sep">·</span>
+  <a href="#">设计规范</a>
+</footer>
+
+<script>
+  (function () {
+    var nodes = [].slice.call(document.querySelectorAll('.qt-reveal'));
+    if (!nodes.length) return;
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('qt-ready');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+</script>
+
+</body>
+</html>
