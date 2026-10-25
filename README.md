@@ -10,7 +10,7 @@
 
 ```bash
 git clone https://github.com/CommitByRyan/quiet-tech-style.git
-open quiet-tech-style/demo.html      # 直接看效果
+open quiet-tech-style/index.html     # 直接看效果
 ```
 
 把 `tokens.css` 与 `theme.css` 拷进你的项目：
@@ -53,7 +53,7 @@ open quiet-tech-style/demo.html      # 直接看效果
 | [`SKILL.md`](SKILL.md) | 技能包形态（WorkBuddy / Agent Skill），放入技能目录即可自动触发 |
 | [`tokens.css`](tokens.css) | 变量层：九色、字号阶、间距、动效曲线 |
 | [`theme.css`](theme.css) | 组件层：首屏、数字条、版块、卡片、列表、两栏、页脚、长文 |
-| [`demo.html`](demo.html) | 单文件演示，含全部组件与滚动入场 |
+| [`index.html`](index.html) | 单文件演示，含全部组件与滚动入场；已开启 Pages 在线预览 |
 
 ## 设计令牌
 

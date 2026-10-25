@@ -87,7 +87,7 @@ cp tokens.css theme.css 你的项目/
 | `prompt.md` | 可直接粘贴给模型的生成指令 |
 | `tokens.css` | 变量层，可单独引入做配色基线 |
 | `theme.css` | 组件层，类名 `qt-*` |
-| `demo.html` | 单文件演示，打开即看效果 |
+| `index.html` | 单文件演示，打开即看效果 |
 
 ## 已知边界
 
